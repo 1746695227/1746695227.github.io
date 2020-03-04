@@ -2,11 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>测试json交互</title>
+
+    <!--使用layui的css样式-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <!--使用自定义的css样式-->
+    <link rel="stylesheet" href="/css/test1.css">
+
+    <!--调用jquery库-->
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <!--调用layui.js-->
+    <script type="text/javascript" src="/layui/layui.js"></script>
+
+    <!--调用自己写的js-->
+    <script type="text/javascript" src="/js/test1.js"></script>
+
+    <!--测试分页-->
+
+
 </head>
-<body bgcolor="#778899">
+<body>
+    <br>
+    <div class="layui-container" >
 
-    <h1 style="text-align: center">这是主页！</h1>
+        <div >
+            <div class="divSearche" style="text-align: center">
+                <input type="text" name="" id="txtSearch" class="inputLine"/>
+                <input type="button" value="根据id搜索" onclick="findGuanliyuanById()" class="layui-btn"/>
+<!--                <input type="button" value="显示所有User" onclick="showAllUsers()" class="layui-btn"/>-->
+            </div>
 
+            <table id="tbuser" border="1" style="text-align: center"  class="layui-table">
+                <thead >
+                <tr>
+                    <td><input type="checkbox" name="cbkAll" id="cbkAll" onclick="checkAll()"/><span>全选</span></td>
+                    <td>管理员编号</td>
+                    <td>管理员名称</td>
+                    <td>密码</td>
+                    <td>编辑</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <!-- 存放加载数据 -->
+                </tbody>
+            </table>
+            <!--  class="page"  通过laypage插件自带的按钮渲染出来 -->
+            <div class="page" style="text-align: center">
+            </div>
+            <input type="button" value="批量删除" onclick="delGuanliyuans()" class="layui-btn"/>
+        </div>
+        <br>
+
+        <div style="text-align: center">
+
+            <p class="layui-form-item">
+                <label>管理员编号：</label>
+                <input class="inputLine" type="text" name="" id="txtgId" />
+            </p>
+            <p class="layui-form-item">
+                <label >管理员名称：</label>
+                <input class="inputLine" type="text" name="" id="txtgName" />
+            </p>
+            <p class="layui-form-item">
+                <label >管理员密码：</label>
+                <input class="inputLine" type="text" name="" id="txtgPwd" />
+            </p>
+
+<!--            <p class="layui-form-item">-->
+<!--                <label class="layui-form-label">管理员编号：</label>-->
+<!--                <p class="layui-input-block">-->
+<!--                    <input type="text" name=".name" lay-verify="" required-->
+<!--                           placeholder="请输入管理员编号" autocomplete="off" class="layui-input">-->
+<!--                </p>-->
+<!--            </p>-->
+<!--            <p class="layui-form-item">-->
+<!--                <label class="layui-form-label">管理员名称：</label>-->
+<!--                <p class="layui-input-block">-->
+<!--                    <input type="text" name="" lay-verify="" required-->
+<!--                           placeholder="请输入管理员名称" autocomplete="off" class="layui-input">-->
+<!--                </p>-->
+<!--            </p>-->
+<!--            <p class="layui-form-item">-->
+<!--                <label class="layui-form-label">密码：</label>-->
+<!--                <p class="layui-input-block">-->
+<!--                    <input type="password" name="" lay-verify="" required-->
+<!--                           placeholder="请输入密码" autocomplete="off" class="layui-input">-->
+<!--                </p>-->
+<!--            </p>-->
+            <div><input type="button" value="添加"  onclick="addGuanliyuan()" class="layui-btn"/></div>
+        </div>
+    </div>
 </body>
 </html>

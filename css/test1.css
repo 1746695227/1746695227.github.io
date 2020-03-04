@@ -1,0 +1,41 @@
+
+ul.IsignUp li{
+   margin-top:5px;
+}
+input.inputLine{
+    width:226px;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+}
+input.inputLine:focus{
+    border-style:solid;
+    border-color: #03a9f4;
+    box-shadow: 0 0 5px #03a9f4;
+}
+input.inputLeft{
+    width:130px;
+}
+button,select{
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+}
+button:hover,select:hover{
+    border-color: #03a9f4;
+}
+button:active {
+    background:#03a9f4;
+}
+
+/*label.label_1{*/
+/*    !*width:55px;*!*/
+/*    !*height:24px;*!*/
+/*    display:block;*/
+/*    float:left;*/
+/*    !*background:url(label.png) no-repeat left top;*!*/
+/*    line-height:22px;*/
+/*    color:#999;*/
+/*    padding-left:18px;*/
+/*}*/
+
